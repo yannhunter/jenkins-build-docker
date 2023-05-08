@@ -14,7 +14,7 @@ def pipelineContext = [:]
 
         stage('Run') {
             img.withRun("--name run-$BUILD_ID -p 80:80") { c ->
-            sh 'echo “The Run stage is done !!!” '
+            sh 'echo “The Run stage is well done!!!” '
                 }
         }
                             
