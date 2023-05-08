@@ -12,4 +12,8 @@ node{
         sh 'curl 192.168.10.5:80'
 	  }
     }
+        stage('Push image') {
+            withDockerRegistry([credentialid:])
+      app = docker.build("gunhunter21/resto2")
+     }
 }   
