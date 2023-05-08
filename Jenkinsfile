@@ -9,7 +9,7 @@ node{
     stage('Test image') {
       docker.image('gunhunter21/resto2').withRun('-p 80:80') { c ->
         sh 'docker ps'
-        sh 'curl localhost'
+        sh 'curl 192.168.10.5:80'
 	  }
     }
 }   
