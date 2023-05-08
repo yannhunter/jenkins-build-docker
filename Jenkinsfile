@@ -13,7 +13,9 @@ def pipelineContext = [:]
         }
 
         stage('Run') {
-            img.withRun("--name run-$BUILD_ID -p 80:80")
+            img.withRun("--name run-$BUILD_ID -p 80:80") { c ->
+            sh 'docker ps'
+                }
         }
                             
         stage('Test') {
